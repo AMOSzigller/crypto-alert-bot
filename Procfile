@@ -1,1 +1,1 @@
-worker: python crypto_alert_bot.py
+worker: pip install -r requirements.txt && python crypto_alert_bot.py
