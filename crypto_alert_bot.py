@@ -6,7 +6,7 @@ from datetime import datetime
 
 # הגדרת טוקן ו-ID של הקבוצה בטלגרם
 TELEGRAM_BOT_TOKEN = "7702238069:AAEdTO6ks2-ikICgKo4JNv4dwqulvNpOgNY"
-TELEGRAM_CHAT_ID = "-4701316691"
+TELEGRAM_CHAT_ID = "-1002352550208"
 
 # רשימת המטבעות למעקב
 COINS = {
@@ -49,7 +49,7 @@ while True:
             change_percent = ((new_price - old_price) / old_price) * 100
             print(f"📊 {symbol.upper()}: מחיר ישן: {old_price}, מחיר חדש: {new_price}, שינוי: {change_percent:.2f}%")
             
-            if abs(change_percent) >= 0.1:
+            if abs(change_percent) >= 3:
                 direction = "📈 עלייה" if change_percent > 0 else "📉 ירידה"
                 if symbol in ['edwin', 'tri-sigma']:
                     alert_message = f"⚠️ {direction} של {change_percent:.2f}% במטבע {symbol.upper()} תוך 5 דקות!\n💰 מחיר נוכחי: {new_price:.4f}$"
