@@ -119,15 +119,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
 ## 📞 Contact
-For any issues or inquiries, reach out to:
-- **Telegram:** [Your Telegram Handle](https://t.me/yourhandle)
-- **GitHub Issues:** [Open an Issue](https://github.com/your-username/crypto-alert-bot/issues)
-
-🚀 Happy Trading!
+@bartate
 
