@@ -14,7 +14,8 @@ COINS = {
     "ethereum": "eth",
     "solana": "sol",
     "edwin": "edwin",
-    "tri-sigma": "tri-sigma"
+    "tri-sigma": "tri-sigma",
+    "griffain": "griffain"
 }
 
 # יצירת חיבור לבוט
@@ -51,7 +52,7 @@ while True:
             
             if abs(change_percent) >= 3:
                 direction = "📈 עלייה" if change_percent > 0 else "📉 ירידה"
-                if symbol in ['edwin', 'tri-sigma']:
+                if symbol in ['edwin', 'tri-sigma', 'griffain']:
                     alert_message = f"⚠️ {direction} של {change_percent:.2f}% במטבע {symbol.upper()} תוך 5 דקות!\n💰 מחיר נוכחי: {new_price:.4f}$"
                 else:
                     alert_message = f"⚠️ {direction} של {change_percent:.2f}% במטבע {symbol.upper()} תוך 5 דקות!\n💰 מחיר נוכחי: {new_price:.2f}$"
