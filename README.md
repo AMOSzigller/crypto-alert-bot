@@ -1,7 +1,5 @@
 # Crypto Alert Bot
 
-![Crypto Alert Bot](https://your-image-url-here.com/logo.png)
-
 ## 📌 Introduction
 This bot is designed to track cryptocurrency price changes and send alerts to Telegram when significant fluctuations occur.
 
