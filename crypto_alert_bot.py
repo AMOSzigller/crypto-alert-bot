@@ -4,8 +4,8 @@ import telegram
 from datetime import datetime
 
 # Define Telegram bot token and group chat ID
-TELEGRAM_BOT_TOKEN = "XXX"
-TELEGRAM_CHAT_ID = "XXX"
+TELEGRAM_BOT_TOKEN = "your-telegram-bot-token"
+TELEGRAM_CHAT_ID = "your-chat-id"
 
 # List of cryptocurrencies to track
 COINS = {
