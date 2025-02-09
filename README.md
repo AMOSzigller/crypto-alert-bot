@@ -1,64 +1,67 @@
-# Crypto Alert Bot
+# 🚀 Crypto Alert Bot
 
 ## 📌 Introduction
-This bot is designed to track cryptocurrency price changes and send alerts to Telegram when significant fluctuations occur.
+Crypto Alert Bot is a Telegram-integrated tool that tracks real-time cryptocurrency price changes and sends alerts when significant fluctuations occur.
 
 ---
 
-## 🚀 Features
-- Real-time cryptocurrency price tracking.
-- Sends alerts to Telegram when prices fluctuate beyond a set threshold.
-- Runs as a `systemd` service for stability and automatic restarts.
-- Easy to configure and update.
+## 🌟 Features
+- ✅ Real-time cryptocurrency price tracking 📊  
+- ✅ Sends alerts to Telegram when prices fluctuate beyond a set threshold 📢  
+- ✅ Runs as a `systemd` service for stability and automatic restarts 🔄  
+- ✅ Easy to configure and update 🛠️  
+- ✅ Secure and lightweight 🚀  
 
 ---
 
 ## 📥 Installation & Setup
 
-### **1️⃣ Connecting to the Server**
-To use the bot, connect to the server where it is installed:
-```bash
+### **1️⃣ Connect to Your Server**
+Ensure you have SSH access to the server where you want to run the bot:
+```sh
 ssh azureuser@<server-ip>
 ```
 
 ### **2️⃣ Clone the Repository**
-If you haven't already cloned the repository, run:
-```bash
+Download the bot's source code:
+```sh
 git clone https://github.com/your-username/crypto-alert-bot.git
 cd crypto-alert-bot
 ```
 
-### **3️⃣ Setting up Virtual Environment**
-```bash
+### **3️⃣ Set Up Virtual Environment**
+Create and activate a virtual environment:
+```sh
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### **4️⃣ Configuring the Bot**
+### **4️⃣ Configure the Bot**
 Update `config.py` with your Telegram bot token and chat ID:
 ```python
 TELEGRAM_BOT_TOKEN = "your-telegram-bot-token"
 TELEGRAM_CHAT_ID = "your-chat-id"
 ```
+⚠ **Security Warning:** Do NOT commit sensitive credentials to public repositories.
 
 ---
 
 ## ⚡ Running the Bot
 
-### **1️⃣ Start the bot manually**
-```bash
+### **1️⃣ Start the Bot Manually**
+```sh
 python3 crypto_alert_bot.py
 ```
 
 ### **2️⃣ Running via `systemd`**
-If installed as a `systemd` service:
-```bash
+Ensure the bot restarts automatically by running it as a `systemd` service:
+```sh
 sudo systemctl start crypto_alert_bot
 ```
 
 ### **3️⃣ Enable Auto-Start on Boot**
-```bash
+```sh
 sudo systemctl enable crypto_alert_bot
 ```
 
@@ -67,17 +70,17 @@ sudo systemctl enable crypto_alert_bot
 ## 🔧 Managing the Bot
 
 ### **Check Bot Status**
-```bash
+```sh
 sudo systemctl status crypto_alert_bot
 ```
 
 ### **Stop the Bot**
-```bash
+```sh
 sudo systemctl stop crypto_alert_bot
 ```
 
 ### **Restart the Bot**
-```bash
+```sh
 sudo systemctl restart crypto_alert_bot
 ```
 
@@ -85,11 +88,11 @@ sudo systemctl restart crypto_alert_bot
 
 ## 🔍 Debugging & Logs
 If the bot is not functioning correctly, check its logs:
-```bash
+```sh
 journalctl -u crypto_alert_bot --reverse -n 50
 ```
 To see live logs:
-```bash
+```sh
 journalctl -u crypto_alert_bot -f
 ```
 
@@ -107,16 +110,49 @@ When the bot starts, it sends a message like:
 If a cryptocurrency price changes by more than 3%, the bot sends an alert:
 ```
 ⚠️ 📈 BTC price increased by 3.5% within 5 minutes!
-💰 Current price: $43500.12
+💰 Current price: $43,500.12
+```
+
+---
+
+## 🛠 Troubleshooting
+
+🔴 **Bot is not sending messages?**  
+- Check if the Telegram bot token is correct.
+- Verify that the bot has permissions to send messages to the chat.
+
+🔴 **Bot crashes on startup?**  
+- Run `python3 crypto_alert_bot.py` manually to check for errors.
+- Check logs with `journalctl -u crypto_alert_bot -n 50`.
+
+🔴 **Service not found when using `systemctl`?**  
+- Ensure the service file is correctly set up (`/etc/systemd/system/crypto_alert_bot.service`).
+- Reload `systemd` configuration with:
+  ```sh
+  sudo systemctl daemon-reload
+  ```
+
+---
+
+## 📦 Docker Support (Optional)
+If you prefer running the bot using Docker:
+```sh
+docker build -t crypto-alert-bot .
+docker run -d --name crypto-alert-bot crypto-alert-bot
 ```
 
 ---
 
 ## 🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome! For major changes, please open an issue first to discuss your ideas.
 
 ---
 
 ## 📞 Contact
-Telegram: @bartate
-Discord: amoszigller
+💬 Telegram: [@bartate](https://t.me/bartate)  
+💻 Discord: `amoszigller`
+
+---
+
+🚀 **Enjoy seamless crypto tracking with Crypto Alert Bot!**
+
